@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #4C7907;
+    height: 100%;
+}
+.container-fluid {
+    background-color: #4C7907;
+    position: relative;
+    height: 100%;
+}
+
+.quote-box {
+    background-color: #D4FB97;
+    position: absolute;
+    width: 400px;
+    height: 240px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.quote {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.author {
+    margin-right: 20px;
+}
+
+.author__col {
+    text-align: right;
+}
+
+.buttons {
+    padding-top:105px;
+    margin-left: 20px;
+}
