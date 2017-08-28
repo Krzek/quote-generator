@@ -27,17 +27,38 @@ body {
 .quote {
     margin-left: 20px;
     margin-top: 20px;
+    margin-right: 20px;
+    height: 100px;
 }
 
 .author {
     margin-right: 20px;
+    height: 30px;
 }
 
 .author__col {
     text-align: right;
+    font-weight: bold;
+}
+
+.quote__col {
+    font-size: 25px;    
+}
+
+.quote__span {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .buttons {
-    padding-top:105px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.btn {
+    color: #D4FB97;
+    background-color: #528800;
+}
+
+.btn__twitter {
     margin-left: 20px;
 }
