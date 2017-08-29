@@ -6,17 +6,15 @@ let lastRandomInt = 0;
 let theAuthor;
 let theQuote;
 
+window.addEventListener('load', generateQuote);
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     randomInt = Math.floor(Math.random() * (max - min)) + min;
     if (randomInt == lastRandomInt) {
-        console.log('RANDOM INT = ', randomInt);
-        console.log('LAST RANDOM INT = ', lastRandomInt);
         randomInt++;
-        console.log('RANDOM INT UPDATED = ', randomInt);
         if (randomInt == 9) {
-            console.log('RANDOM INT == 9');
             randomInt = 0;
         }
     }
@@ -41,8 +39,6 @@ function generateQuote() {
             this.theQuote = quote;
             htmlAuthor.innerHTML = `<p>- ${author}</p>`;
             htmlQuote.innerHTML = `<p><i class="fa fa-quote-left"></i> <span class="quote__span">${quote}</span> <i class="fa fa-quote-right"></i></p>`;
-            console.log('Author: ', author);
-            console.log('Quote: ', quote);
         })
         .catch(function (err) {
             console.error(err);
@@ -51,5 +47,5 @@ function generateQuote() {
 
 function tweetIt() {
     let quoteToTweet = `"${this.theQuote}" - ${this.theAuthor}`;
-    let twitter = document.getElementById('twitter').setAttribute('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(quoteToTweet));
+    let twitter = document.getElementById('twitter').setAttribute('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(quoteToTweet));
 }
