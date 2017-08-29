@@ -36,12 +36,12 @@ body {
     color: #311007;
 }
 
-.footer__a {
-    text-decoration: none;
+.footer__a, .footer__a:visited {
     color: #311007;
+    text-decoration: none;
 }
 
-.footer__a:hover {
+.footer__a:hover, .footer__a:active {
     color: #D4FB97;
     text-decoration: none;
 }
