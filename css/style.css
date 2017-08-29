@@ -24,6 +24,28 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.footer {
+    position: relative;
+    top: 30px;
+    color: #D4FB97;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer__i {
+    color: #311007;
+}
+
+.footer__a {
+    text-decoration: none;
+    color: #311007;
+}
+
+.footer__a:hover {
+    color: #D4FB97;
+    text-decoration: none;
+}
+
 .quote {
     margin-left: 20px;
     margin-top: 20px;
