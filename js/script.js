@@ -3,6 +3,8 @@ const htmlAuthor = document.getElementById('author');
 const htmlQuote = document.getElementById('quote');
 let randomInt = 0;
 let lastRandomInt = 0;
+let theAuthor;
+let theQuote;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -35,7 +37,8 @@ function generateQuote() {
             let quoteObject = data[getRandomInt(0, data.length)];
             let author = quoteObject.attrib;
             let quote = quoteObject.quote;
-
+            this.theAuthor = author;
+            this.theQuote = quote;
             htmlAuthor.innerHTML = `<p>- ${author}</p>`;
             htmlQuote.innerHTML = `<p><i class="fa fa-quote-left"></i> <span class="quote__span">${quote}</span> <i class="fa fa-quote-right"></i></p>`;
             console.log('Author: ', author);
@@ -44,4 +47,9 @@ function generateQuote() {
         .catch(function (err) {
             console.error(err);
         });
+}
+
+function tweetIt() {
+    let quoteToTweet = `"${this.theQuote}" - ${this.theAuthor}`;
+    let twitter = document.getElementById('twitter').setAttribute('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(quoteToTweet));
 }
