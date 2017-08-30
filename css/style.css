@@ -81,6 +81,12 @@ body {
     background-color: #528800;
 }
 
+.btn:hover {
+    color: #528800;
+    background-color: #D4FB97;
+    border: solid 1px #528800;
+}
+
 .btn__twitter {
     margin-left: 20px;
 }
